@@ -1,1 +1,14 @@
-<h1>Task</h1>
+<h1>Lista de Tareas</h1>
+
+{% if tasks %}
+    <ul>
+        {% for task in tasks %}
+            <li>
+                <strong>{{ task.title }}</strong><br>
+                {{ task.description }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay tareas disponibles.</p>
+{% endif %}
