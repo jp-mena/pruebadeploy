@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-
+import dj_database_url
 from pathlib import Path
 import os
 
@@ -86,6 +86,7 @@ DATABASES = {
     }
 }
 
+DATABASES['default'] = dj_database_url.parse("postgresql://pruebadeploydb_rny6_user:V1Bfsf4X7O66erU5hWok3ZtKpcuENimd@dpg-cslsf5t6l47c73aa8arg-a.oregon-postgres.render.com/pruebadeploydb_rny6")
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
